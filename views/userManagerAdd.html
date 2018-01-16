@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>创建用户</title>
+	<link rel="stylesheet" href="../lib/layui/css/layui.css">
+	<link rel="stylesheet" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../lib/animate.css">
+	<link rel="stylesheet" href="../style/userManagerAdd.css">
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<header>
+			<div class="layui-header header-nav animated bounceInLeft">
+				<div class="layui-logo">反欺诈拦截系统</div>
+				<div class="layui-nav layui-layout-right">
+					<div class="layui-inline layui-text line-num">
+						<i class="fa fa-user fa-lg"></i> 在线人数:
+						<span>1000</span>
+					</div>
+					<div class="layui-nav-item">
+						<a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 用户
+                </a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="#">
+                            <i class="fa fa-user fa-lg"></i>用户资料</a>
+							</dd>
+							<dd>
+								<a href="#">
+                            <i class="fa fa-cog fa-lg"></i>修改密码</a>
+							</dd>
+							<dd>
+								<a href="#">
+                            <i class="fa fa-sign-out fa-lg"></i>退出系统</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</header>
+		<aside>
+			<div class="layui-side layui-bg-black aside-nav  animated bounceInDown">
+				<div class="layui-side-scroll">
+					<ul class="layui-nav layui-nav-tree" lay-filter="test">
+						<li class="layui-nav-item layui-nav-itemed">
+							<a class="app-menu__item active" href="./index.html">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="javascript:;">
+                        <i class="fa fa-line-chart"></i>
+                        <span>流量分析</span>
+                    </a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="./flowStop.html">
+                                <i class="icon fa fa-circle-o"></i>拦截报表</a>
+								</dd>
+								<dd>
+									<a href="./flowUser.html">
+                                <i class="icon fa fa-circle-o"></i>用户报表</a>
+								</dd>
+								<dd>
+									<a href="./flowWeb.html">
+                                <i class="icon fa fa-circle-o"></i>网站分析</a>
+								</dd>
+								<dd>
+									<a href="#">
+                                <i class="icon fa fa-circle-o"></i>网站黑名单</a>
+								</dd>
+								<dd>
+									<a href="#">
+                                <i class="icon fa fa-circle-o"></i>网站白名单</a>
+								</dd>
+								<dd>
+									<a href="#">
+                                <i class="icon fa fa-circle-o"></i>AD账号黑名单</a>
+								</dd>
+								<dd>
+									<a href="#">
+                                <i class="icon fa fa-circle-o"></i>AD账号白名单</a>
+								</dd>
+							</dl>
+						</li>
+						<li class="layui-nav-item">
+							<a href="./userManager.html">
+                        <i class="fa fa-user-o"></i>
+                        <span>用户管理</span>
+                    </a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="./systemSetting.html">
+                        <i class="fa fa-gears"></i>
+                        <span>系统配置</span>
+                    </a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="./systemLog.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>系统日志</span>
+                    </a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="./extentManager.html">
+                        <i class="fa fa-shield"></i>
+                        <span>权限管理</span>
+                    </a>
+						</li>
+						<li class="layui-nav-item">
+							<a href="#">
+                        <i class="fa fa-power-off"></i>
+                        <span>安全退出</span>
+                    </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</aside>
+		<div class="layui-body">
+			<div style="padding: 15px;">
+				<p class="title-auto">创建用户资料信息</p>
+				<div class="layui-tab">
+
+					<div class="layui-tab-content" style="padding: 55px 80px;">
+						<!-- up -->
+						<div class="accredit-bar">
+							<span class="accredit-bar-left" style="display:inline">管理用户基本信息</span>
+							<p class="accredit-bar-right">注：带有“*”必填项</p>
+						</div>
+						<!--domn  -->
+						<div class="accredit-box">
+							<form class="layui-form" action="">
+								<div class="layui-form-item">
+									<label class="layui-form-label">用户名：</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+										<i class="formstar">*</i>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<label class="layui-form-label">密码：</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required lay-verify="required" placeholder="输入员工姓名进行查询" autocomplete="off" class="layui-input">
+										<i class="formstar">*</i>
+									</div>
+								</div>
+
+								<div class="layui-form-item">
+									<label class="layui-form-label">员工姓名：</label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required lay-verify="required" placeholder="输入员工姓名进行查询" autocomplete="off" class="layui-input">
+										<button class="layui-btn formbtn">查询</button>
+										<i class="formstar" style="right: -112px">*</i>
+									</div>
+								</div>
+
+								<div class="layui-form-item">
+									<label class="layui-form-label">部门名称: </label>
+									<div class="layui-input-block">
+										<select name="city" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="0">总经办</option>
+                                            <option value="1">业务部</option>
+                                            <option value="2">资源部</option>
+                                            <option value="3">研发部</option>
+                                            <option value="3">人事部</option>
+
+                                        </select>
+										<i class="formstar">*</i>
+									</div>
+								</div>
+
+								<div class="layui-form-item">
+									<label class="layui-form-label">职位名称: </label>
+									<div class="layui-input-block">
+										<input type="text" name="title" required lay-verify="required" placeholder="" autocomplete="off" class="layui-input" style="border: 0px;outline:none" readonly value="技术经理">
+										<i class="formstar">*</i>
+									</div>
+								</div>
+
+								<div class="layui-form-item">
+									<label class="layui-form-label">职务类别: </label>
+									<div class="layui-input-block">
+										<select name="city" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="0">总经理</option>
+                                            <option value="1">副经理</option>
+                                            <option value="2">大区经理</option>
+                                            <option value="3">省经理</option>
+
+                                        </select>
+									</div>
+								</div>
+
+								<buttton class="layui-btn useredit">确定编辑</buttton>
+								<buttton class="layui-btn useredit">取消</buttton>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="layui-footer animated bounceInRight">
+			<!-- 底部固定区域 -->
+			© 反欺诈.com
+		</div>
+	</div>
+	<script src="../lib/layui/layui.all.js"></script>
+	<script>
+		layui.use('element', function() {
+			var element = layui.element;
+			//…
+		});
+	</script>
+</body>
+
+</html>

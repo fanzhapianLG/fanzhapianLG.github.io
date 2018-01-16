@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../lib/layui/css/layui.css">
+	<link rel="stylesheet" href="../style/common.css">
+	<link rel="stylesheet" type="text/css" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../lib/animate.css">
+	<link rel="stylesheet" href="../style/index.css">
+	<title>首页</title>
+	<script src='http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM'></script>
+</head>
+
+<body class="layui-layout-body">
+	<header>
+		<div class="layui-header header-nav animated bounceInLeft">
+			<div class="layui-logo">反欺诈拦截系统</div>
+			<div class="layui-nav layui-layout-right">
+				<div class="layui-inline layui-text line-num">
+					<i class="fa fa-user fa-lg"></i> 在线人数:
+					<span>1000</span>
+				</div>
+				<div class="layui-nav-item">
+					<a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 用户
+                </a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="#">
+                            <i class="fa fa-user fa-lg"></i>用户资料</a>
+						</dd>
+						<dd>
+							<a href="#">
+                            <i class="fa fa-cog fa-lg"></i>修改密码</a>
+						</dd>
+						<dd>
+							<a href="#">
+                            <i class="fa fa-sign-out fa-lg"></i>退出系统</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</header>
+	<aside>
+		<div class="layui-side layui-bg-black aside-nav  animated bounceInDown">
+			<div class="layui-side-scroll">
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a class="app-menu__item active" href="./index.html">
+                        <i class="fa fa-home"></i>
+                        <span>首页</span>
+                    </a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+                        <i class="fa fa-line-chart"></i>
+                        <span>流量分析</span>
+                    </a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="./flowStop.html">
+                                <i class="icon fa fa-circle-o"></i>拦截报表</a>
+							</dd>
+							<dd>
+								<a href="./flowUser.html">
+                                <i class="icon fa fa-circle-o"></i>用户报表</a>
+							</dd>
+							<dd>
+								<a href="./flowWeb.html">
+                                <i class="icon fa fa-circle-o"></i>网站分析</a>
+							</dd>
+							<dd>
+								<a href="#">
+                                <i class="icon fa fa-circle-o"></i>网站黑名单</a>
+							</dd>
+							<dd>
+								<a href="#">
+                                <i class="icon fa fa-circle-o"></i>网站白名单</a>
+							</dd>
+							<dd>
+								<a href="#">
+                                <i class="icon fa fa-circle-o"></i>AD账号黑名单</a>
+							</dd>
+							<dd>
+								<a href="#">
+                                <i class="icon fa fa-circle-o"></i>AD账号白名单</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item">
+						<a href="./userManager.html">
+                        <i class="fa fa-user-o"></i>
+                        <span>用户管理</span>
+                    </a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="./systemSetting.html">
+                        <i class="fa fa-gears"></i>
+                        <span>系统配置</span>
+                    </a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="./systemLog.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>系统日志</span>
+                    </a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="./extentManager.html">
+                        <i class="fa fa-shield"></i>
+                        <span>权限管理</span>
+                    </a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="#">
+                        <i class="fa fa-power-off"></i>
+                        <span>安全退出</span>
+                    </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<div class="page-content" id="full-screen">
+		<div class="title">反欺诈数据监控平台</div>
+		<div class="data-text-detail">
+			<ul>
+				<li>累计发现危害网站:
+					<span>10000</span>个</li>
+				<li>拦截危害网站累计次数:
+					<span>10000</span>个</li>
+				<li>单日拦截危害网站次数:
+					<span>10000</span>个</li>
+			</ul>
+		</div>
+		<div class="data-show-content">
+			<div class="left">
+				<div id="terminal" alt="终端拦截占比"></div>
+				<div id="data-table" alt="数据表格">
+					<table>
+						<thead>
+							<tr>
+								<th>时间</th>
+								<th>来源</th>
+								<th>IP</th>
+								<th>域名</th>
+								<th>仿冒对象</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+							<tr>
+								<td>09:02</td>
+								<td>北京</td>
+								<td>192.168.12.11</td>
+								<td>www.baidu.com</td>
+								<td>工行</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="center">
+				<div id="map-data" alt="地图数据">
+				</div>
+			</div>
+			<div class="right">
+				<div id="web-type" alt="各类型网站拦截数量占比"></div>
+				<div id="watch" alt="实时拦截量"></div>
+			</div>
+		</div>
+	</div>
+	<script src="../lib/require.js" defer async="true"></script>
+	<script src="../lib/require.js" data-main="../js/index/main"></script>
+</body>
+
+</html>

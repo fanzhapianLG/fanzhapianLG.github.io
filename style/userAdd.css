@@ -1,0 +1,80 @@
+.title-auto{
+    text-align: center;
+    font-family: 'Arial Negreta', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+}
+.accredit-bar{
+
+    border-bottom: 1px solid #ddd;
+    height: 40px;
+    line-height: 40px
+}
+.accredit-bar .accredit-bar-right{
+    text-align: right;
+    color:#AEAEAE;
+    float: right;
+}
+.accredit-bar .accredit-bar-left{
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.accredit-box{
+    padding: 30px 0;
+    width: 55%;
+}
+.accredit-box>div{
+
+    width: 600px;
+    height:400px
+}
+.accredit-box-left{
+    float: left;
+}
+.accredit-box-right{
+    float:right;
+
+}
+.accredit-box-p{
+    font-family: 'Arial Negreta', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+    color: #868686
+}
+.accredit-box-span{
+    font-size: 14px;
+    color: #BCBCBC;
+}
+.accredit-box-container{
+    margin-top: 15px;
+    padding-top: 25px;
+    border:2px dashed #ddd;
+    width: 100%;
+    height: 100%;
+}
+
+.layui-tab-item{
+    position: relative;
+}
+.useredit{
+    margin-left: 112px;
+    margin-top: 40px;
+}
+/*1111111111111btn star*/
+.layui-input-block{
+    position: relative;
+}
+.formstar{
+    font-size: 22px;
+    position: absolute;
+    right: -30px;
+    top: 12px;
+    color: red;
+}
+.formbtn{
+    position: absolute;
+    right: -90px;
+    top: 0px;
+}

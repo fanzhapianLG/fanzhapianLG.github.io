@@ -1,0 +1,7 @@
+require(['../require.config'], function () {
+    require(['layui'], function () {
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    })
+})
